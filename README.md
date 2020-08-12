@@ -30,10 +30,10 @@ conda install -c conda-forge biopython
 ```
 
 ### Usage
-1. git clone [this repository]
+1. git clone https://github.com/nisaji/TransDecoder_Annotator.git
 
 2. place TransDecoder outputs like this.
-
+```
 ./TransDecoder_Annotator
 ├── data
 │   ├── ko_list.txt
@@ -45,6 +45,7 @@ conda install -c conda-forge biopython
     ├── annotator.py
     ├── extract_complete_gff.pl
     └── extract_completes.py
+```
 
 3. Run extract_complete.py
 ```
