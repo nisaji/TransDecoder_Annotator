@@ -30,13 +30,12 @@ conda install -c conda-forge biopython
 ```
 
 ### Usage
-1. git clone https://github.com/nisaji/TransDecoder_Annotator.git
+1. ```git clone https://github.com/nisaji/TransDecoder_Annotator.git```
 
 2. place TransDecoder outputs like this.
 ```
 ./TransDecoder_Annotator
 ├── data
-│   ├── ko_list.txt
 │   ├── transcripts.fasta
 │   ├── transcripts.fasta.transdecoder.cds
 │   ├── transcripts.fasta.transdecoder.genome.gff3
@@ -52,7 +51,24 @@ conda install -c conda-forge biopython
 cd /Trnasdecoder_Annotator
 python ./scripts/extract_complete.py
 ```
-this script output `.complete.cds`, `.complete.pep`, `.genome.complete.gff3` in `/data`.
+this script output `.complete.cds`, `.complete.pep`, `.genome.complete.gff3` in `/data`and working directory is as following.
+```
+./TransDecoder_Annotator
+├── data
+│   ├── transcripts.fasta
+│   ├── transcripts.fasta.transdecoder.cds
+│   ├── **transcripts.fasta.transdecoder.complete.cds**
+│   ├── transcripts.fasta.transdecoder.pep
+│   ├── **transcripts.fasta.transdecoder.complete.pep**
+│   ├── **transcripts.fasta.transdecoder.genome.complete.gff3**
+│   └── transcripts.fasta.transdecoder.genome.gff3
+
+└── scripts
+    ├── TransDecoder_Annotator.py
+    ├── annotator.py
+    ├── extract_complete_gff.pl
+    └── extract_completes.py
+```
 
 4. Run KAAS 
 * This process need `.complete.pep`.
@@ -61,6 +77,24 @@ this script output `.complete.cds`, `.complete.pep`, `.genome.complete.gff3` in 
 * in **Query sequences (in multi-FASTA)**, chose **File upload** and upload .complete.pep file.
 * Run **Compute**
 * When KAAS is finished, Download result(txt) and name as **ko_list.txt** and place in `./TransDecoder_annotator/data/`
+working directory is as following.
+```
+./TransDecoder_Annotator
+├── data
+│   ├── **ko_list.txt**
+│   ├── transcripts.fasta
+│   ├── transcripts.fasta.transdecoder.cds
+│   ├── transcripts.fasta.transdecoder.complete.cds
+│   ├── transcripts.fasta.transdecoder.complete.pep
+│   ├── transcripts.fasta.transdecoder.genome.complete.gff3
+│   ├── transcripts.fasta.transdecoder.genome.gff3
+│   └── transcripts.fasta.transdecoder.pep
+└── scripts
+    ├── TransDecoder_Annotator.py
+    ├── annotator.py
+    ├── extract_complete_gff.pl
+    └── extract_completes.py
+```
 
 5. Run annotator.py
 ```
