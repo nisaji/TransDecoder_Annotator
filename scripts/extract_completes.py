@@ -5,6 +5,11 @@ import glob
 import codecs
 import subprocess
 
+# check Python version
+if sys.version_info != 3:
+    print("python3 is required for TransDecoderAnnotator!")
+    sys.exit()
+
 # path = os.getcwd()
 path = os.path.dirname(os.path.abspath(__file__))
 
