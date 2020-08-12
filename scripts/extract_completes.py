@@ -6,7 +6,7 @@ import codecs
 import subprocess
 
 # check Python version
-if sys.version_info != 3:
+if sys.version_info[0] != 3:
     print("python3 is required for TransDecoderAnnotator!")
     sys.exit()
 
