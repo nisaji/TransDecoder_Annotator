@@ -6,6 +6,8 @@ TransDecoder Annotator is an annotation tool for TransDecoderoutputs.
 This tool outputs the file annotated with KEGG for the output files (.pep, .cds, .genome.gff3) of TranDecoder. Therefore, using this tool makes it easier to understand the functions of proteins and genes found by TransDecoder.
 
 ### Requirement
+#### Python3 is required for this program!
+
 ####  Install Biopython with conda
 ##### Setup miniconda (if already installed, skip this installation)
 ```
