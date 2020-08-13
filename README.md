@@ -32,11 +32,8 @@ conda install -c conda-forge biopython
 ```
 
 ### Usage
-<<<<<<< HEAD
-1. git clone https://github.com/nisaji/TransDecoder_Annotator.git
-=======
+
 1. ```git clone https://github.com/nisaji/TransDecoder_Annotator.git```
->>>>>>> 8c3ae498c81d6b1e19d8046b8137f32966f73876
 
 2. place TransDecoder outputs like this.
 ```
