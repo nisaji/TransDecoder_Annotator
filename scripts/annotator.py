@@ -85,7 +85,7 @@ def annotate_ko2pep():
             definition = definition.rstrip('\r\n')
             print(">" + id_part + " " + ko + " " + definition, file=f)
             print(seq, file=f)
-            time.sleep(0.1)
+            time.sleep(0.05)
         else:
             print(">" + id_part, file=f)
             print(seq, file=f)
@@ -95,7 +95,7 @@ def annotate_ko2cds():
     cds = complete_outputs['cds']
     cds_ann = cds.replace('.complete.cds', '.ann.complete.cds')
     f = open(cds_ann, 'w')
-    for record in SeqIO.parse(cds_ann, 'fasta'):
+    for record in SeqIO.parse(cds, 'fasta'):
         id_part = record.id
         gene_part = id_part.split(".")[0] + "." + id_part.split(".")[1]
         seq = record.seq
@@ -107,10 +107,11 @@ def annotate_ko2cds():
             definition = definition.rstrip('\r\n')
             print(">" + id_part + " " + ko + " " + definition, file=f)
             print(seq, file=f)
-            time.sleep(0.1)
+            time.sleep(0.05)
         else:
             print(">" + id_part, file=f)
             print(seq, file=f)
+
     return
 
 
